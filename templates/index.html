@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nearby Gas Stations</title>
+  </head>
+  <body>
+    <h1>Nearby Gas Stations</h1>
+    <ul>
+      {% for result in results %}
+        <li>
+          <h2>{{ result['name'] }}</h2>
+          <p>{{ result['vicinity'] }}</p>
+          <p>Rating: {{ result.get('rating', 'N/A') }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
